@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode Image</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/dropzone.min.css">
+    <script src="./static/jquery-3.5.0.slim.min.js"></script>
+    <script src="./static/dropzone.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <nav>
+        <div class="nav-title">
+            <a href="">Image Base64 Converter</a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1>Encode Image</h1>
+
+
+        <form action="/file-upload" id="encode-dropzone" class="dropzone">
+            <div class="fallback">
+                <input name="file" type="file" multiple />
+            </div>
+        </form>
+
+        <textarea id="encode-output">
+
+        </textarea>
+
+
+        <button id="encoded-copy">Copy</button>
+
+        <script>
+            Dropzone.autoDiscover = false;
+            Dropzone.autoProcessQueue = false;
+
+            $(document).ready(function () {
+                var myDropzone = new Dropzone("#encode-dropzone", {
+                    url: "/"
+                });
+
+                myDropzone.on('addedfile', async function (file) {
+                    myDropzone.on('thumbnail', async function (file) {
+                        $('#encode-output').val('<img src="' + file.dataURL + '" />')
+                    })
+                })
+
+                $("#encoded-copy").click(function () {
+                    $("#encode-output").select();
+                    document.execCommand('copy');
+                    alert("kopyalandı")
+                });
+            });
+
+
+
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>
