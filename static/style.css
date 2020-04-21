@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    background-color: #512DA8;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    padding: 10;
+    margin: 0;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50vw;
+    list-style: none;
+}
+nav ul li a {
+    font-weight: bold;
+    color: #ebebeb;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+nav ul li{
+    transition: 0.2s ease;
+}
+
+nav ul li:hover, nav ul li a:hover {
+    transform: scale(1.2);
+    color: #FFC107;
+}
+
+.nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+}
+
+.nav-title a {
+    color: #ebebeb;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.container {
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 90vh;
+    display: flex;
+}
+
+#encode-output, #encode-dropzone {
+    padding: 1vw;
+    margin: 0;
+    width: 50vw;
+    height: 10vw;
+    border-radius: 1vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#encoded-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
+    height: 2vw;
+    background-color: #ef5353;
+    border: 0;
+    
+}
