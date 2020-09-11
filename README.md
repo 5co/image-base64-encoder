@@ -2,4 +2,4 @@
 flask, js
 
 
-# [DEMO](https://5co.github.io/image-base64-encoder/)
+# [DEMO](https://c8r.me/image-base64-encoder/)
